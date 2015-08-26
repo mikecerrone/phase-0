@@ -1,4 +1,4 @@
-![Mike's Site Map](/path/to/img.jpg "Mike's Personal Website Site Map 1.0")
+![Mike's Site Map](https://raw.githubusercontent.com/mikecerrone/phase-0/master/week-2/imgs/Screen%20Shot%202015-08-26%20at%201.20.05%20PM.png)
 
 
 What are the 6 Phases of Web Design?
