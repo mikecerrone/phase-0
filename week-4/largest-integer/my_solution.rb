@@ -15,6 +15,5 @@ def largest_integer(list_of_nums)
   list_of_nums.max
 end
 
-p largest_integer([45, 234, 239, 58, 92])
 
 
