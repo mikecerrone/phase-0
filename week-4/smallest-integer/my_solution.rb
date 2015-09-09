@@ -13,6 +13,6 @@
 # Your Solution Below
 
 def smallest_integer(list_of_nums)
-   list_of_nums.sort
-   puts list_of_nums(0)
- end
+  list_of_nums.min
+end
+
