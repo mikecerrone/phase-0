@@ -2,13 +2,18 @@
 
 # I worked on this challenge [by myself, with: ]
 
-# I spent [] hours on this challenge.
+# I spent [2] hours on this challenge.
 
 # 0. Pseudocode
 
-# Input:
-# Output:
+# Input: number of sides of the die
+# Output: the random number that has been "rolled" as well as the number of sides the particular die has
 # Steps:
+#  - inititalize the die by giving it a number of sides
+#  - create the arguement error if there are no sides or negitive sides
+#  - initiate the roll of the die.
+#  - use a class variable to return the sides within the sides method
+#  - roll the die using a random number generator that creates a number between 1 and the numbe of sides choosen
 
 
 # 1. Initial Solution
@@ -48,5 +53,12 @@ puts die.roll
 
 # 4. Reflection
 
+
+# What is an ArgumentError and why would you use one?
+# What new Ruby methods did you implement? What challenges and successes did you have in implementing them?
+# What is a Ruby class?
+# Why would you use a Ruby class?
+# What is the difference between a local variable and an instance variable?
+# Where can an instance variable be used?
 
 

@@ -16,23 +16,33 @@
 
 # What are the steps needed to solve the problem?
  # - first convert the integer into a string
- # - then put break each element of the string out in an array.
- # - next insert a comma into the array every 3 spots.
- # - then combine the array components into a string
+ # - find the string size by splitting it into one unit strings in an array
+ # - find how many commas we will need by counting all stings in array
+ # - IF less than 4 units just print full string
+ # - ELSE insert a comma into the array every 3 spots.
+ # - then combine the array components into a string by joining
 
 
 
 # 1. Initial Solution
 
-def seperate_comma(int)
-   string_num = int.to_s
-   string_array = string_num.split(// -4)
-   complete_string_array = string_array.join(",")
-p complete_string_array
-p complete_string_array.to_s
+def separate_comma(number)
+   a = number.to_s.split(//)
+   b = a.size/3
+    if a.size < 4
+      p number.to_s
+    else
+      n = -4
+      b.to_i.times do |i|
+       a.insert(n, ',')
+       n -= 4
+      end
+ end
+ puts a.join("")
+
 end
 
-seperate_comma(100100100)
+
 
 
 
