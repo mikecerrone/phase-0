@@ -54,3 +54,12 @@ end
 # 3. Reflection
 
 
+
+#What was your process for breaking the problem down? What different approaches did you consider?
+  # - I went through each step and decided that it would probably be best to iterate through each and split.
+#Was your pseudocode effective in helping you build a successful initial solution?
+  # - It was effective in keeping my research on track but not really helpful in th esolution.
+#What Ruby method(s) did you use when refactoring your solution? What difficulties did you have implementing it#/them? Did it/they significantly change the way your code works? If so, how?
+#How did you initially iterate through the data structure?
+ # - I iterated using times. I am very close to the solution as the results look as they should but I had to timebox and the tests are still failing.
+#Do you feel your refactored solution is more readable than your initial solution? Why?
