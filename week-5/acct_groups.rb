@@ -1,4 +1,4 @@
-list_of_names = ["mike","bob", "earl","lori","katie","mary","joe","dennis","laura","laurie","chirs","rick", "perry","kamui","rob","justin","ralph"]
+list_of_names = ["mike","bob", "earl","lori","katie","mary","joe","dennis","laura","laurie","chirs","rick", "perry","kamui","rob","justin","ralph", "johnny", "chran"]
 
 #def group_create(list)
 # sub_arrays = list.each_slice(5).to_a
