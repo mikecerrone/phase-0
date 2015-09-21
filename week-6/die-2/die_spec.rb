@@ -49,3 +49,4 @@ describe Die do
     end
   end
 end
+
