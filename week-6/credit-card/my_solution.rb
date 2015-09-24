@@ -26,78 +26,105 @@
 # Don't forget to check on initialization for a card length
 # of exactly 16 digits
 
+# class CreditCard
+
+#   def initialize(creditnumber)
+#   @creditnumber=creditnumber
+#   raise ArgumentError.new"needs to be 16 digits" if creditnumber.to_s.length != 16
+#   end
+
+#   def double_number
+#   digit_array= @creditnumber.to_s.chars.map(&:to_i)
+#   @double_digit=digit_array.map!.with_index {|digit,index|
+#   if index % 2 ==1
+#   digit*2
+#   else
+#   digit
+
+#   end}
+#   end
+
+#   def break_add
+#   double_number
+#   breaker= @double_digit.map! {|digit,index|
+#   if digit >9
+#   digit.to_s.split('')
+
+#   else
+#   digit
+#   end}
+
+#   final_array=breaker.flatten!
+#   final_array.map! {|number|
+
+#   if number.kind_of? (String)
+#   number.to_i
+#   else
+#   number
+#   end}
+
+#  @adder = final_array.inject{ |x,y| x += y }
+#  end
+
+# def check_card
+#   double_number
+#   break_add
+#   if @adder % 10 == 0
+#   return true
+#   else
+#   return false
+#   end
+# end
+
+# end
+
+
+
+
+
+
+# Refactored Solution
+
+
 class CreditCard
 
-  def initialize(creditnumber)
-  @creditnumber=creditnumber
-  raise ArgumentError.new"needs to be 16 digits" if creditnumber.to_s.length != 16
-  end
 
-  def double_number
-  digit_array= @creditnumber.to_s.chars.map(&:to_i)
-  @double_digit=digit_array.map!.with_index {|digit,index|
-  if index % 2 ==1
-  digit*2
-  else
-  digit
 
-  end}
-  end
-
-  def break_add
-  double_number
-  breaker= @double_digit.map! {|digit,index|
-  if digit >9
-  digit.to_s.split('')
-
-  else
-  digit
-  end}
-
-  final_array=breaker.flatten!
-  final_array.map! {|number|
-
-  if number.kind_of? (String)
-  number.to_i
-  else
-  number
-  end}
-
- @adder = final_array.inject{ |x,y| x += y }
+ def initialize(creditnumber)
+   @creditnumber = creditnumber
+   raise ArgumentError.new "Your credit card number needs to be 16 digits long!" if creditnumber.to_s.length != 16
  end
 
-def check_card
+ def check_card
    double_number
-   break_add
+   sum
    if @adder % 10 == 0
-    return true
-  else
-    return false
-  end
+     return true
+   else
+     return false
+   end
+ end
+
+ def double_number
+   @digits = @creditnumber.to_s.split("")
+
+   @digits.map!.with_index{ |x, i|
+     if i.even?
+       x.to_i * 2
+     else x.to_i
+     end
+   }
+ end
+
+ def sum
+   breaker = @digits.map {|x|
+     if x.to_i > 9
+       split = x.to_s.split("")
+       split.map { |n| n.to_i }
+     else
+       x
+     end
+   }
+   @adder = breaker.flatten!.inject {|x, sum| x += sum }
+ end
 end
-
-end
-
-
-
-
-credit=CreditCard.new(4563960122001999)
-puts credit.check_card
-
-
-
-
-# Refactored Solution
-
-
-
-# Refactored Solution
-
-
-
-
-
-
-
-
-# Reflection
