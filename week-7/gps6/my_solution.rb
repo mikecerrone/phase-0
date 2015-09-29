@@ -4,27 +4,31 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# links another file to this file. The other file must be in the same directory in current format. Can be the file path. (require_relative is for ruby)
 #
 require_relative 'state_data'
 
 class VirusPredictor
-
+# creates instance var for state, population density, and population
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
-  end
 
+
+  end
+# calling the private methods from the the class VirusPredictor.
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
-  private
 
-  def predicted_deaths(population_density, population, state)
+  private # restricting the use of the methods by not allowing "public" objects to be passed. only access private methods within the class.
+
+  def predicted_deaths
     # predicted deaths is solely based on population density
+
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
@@ -41,7 +45,7 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -81,6 +85,11 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
+
+STATE_DATA.each do |state, data|
+  current_state = VirusPredictor.new(state, data[:population_density], data[:population])
+  current_state.virus_effects
+end
 
 
 #=======================================================================
