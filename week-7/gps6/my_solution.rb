@@ -94,3 +94,15 @@ end
 
 #=======================================================================
 # Reflection Section
+
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+  #--- One uses a hash rocket the other uses the symbol method.
+# What does require_relative do? How is it different from require?
+  #---it refrences a file that is in a similar directory as the file it is in. Requre would need a full filepath.
+# What are some ways to iterate through a hash?
+  #---We used each, you can also use a for loop.
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+  #---That they were instance varaiables and didnt need to be passed through as arguments
+# What concept did you most solidify in this challenge?
+  #---Iterating through nested hashes.
