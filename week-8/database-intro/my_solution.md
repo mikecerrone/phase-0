@@ -9,9 +9,8 @@
 9. sqlite> SELECT region_name from regions WHERE region_name LIKE  "Central";
 10. sqlite> SELECT region_name, state_name FROM states JOIN regions ON states.region_id = regions.id ORDER BY region_id ASC;
 
-![DB Scema](/Clueless_scema.png)
 
-
+Format: ![DB Scema](https://raw.githubusercontent.com/mikecerrone/phase-0/master/week-8/database-intro/Clueless_scema.png)
 
 
 What are databases for?
